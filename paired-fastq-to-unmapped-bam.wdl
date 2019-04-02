@@ -41,8 +41,9 @@ workflow ConvertPairedFastQsToUnmappedBamWf {
 
   String ubam_list_name
 
+  # broadinstitute/gatk:4.1.1.0 
   String? gatk_docker_override
-  String gatk_docker = select_first([gatk_docker_override, "broadinstitute/gatk:latest"])
+  String gatk_docker = select_first([gatk_docker_override, "broadinstitute/gatk:4.1.1.0"])
   String? gatk_path_override
   String gatk_path = select_first([gatk_path_override, "/gatk/gatk"])
   Int? preemptible_attempts

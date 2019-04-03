@@ -1,0 +1,6 @@
+snakejob.*
+.snakemake/
+data/
+cromwell-*
+metadata.json
+test.err

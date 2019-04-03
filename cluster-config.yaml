@@ -4,7 +4,7 @@ __default__:
   m_mem_free: 10G
   threads: 1
 run: 
-  h_vmem: 15G
-  mem_free: 15G
-  m_mem_free: 15G
+  h_vmem: 38G
+  mem_free: 38G
+  m_mem_free: 38G
   threads: 2

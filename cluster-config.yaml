@@ -3,8 +3,13 @@ __default__:
   mem_free: 10G
   m_mem_free: 10G
   threads: 1
-run: 
+run_ubam: 
   h_vmem: 38G
   mem_free: 38G
   m_mem_free: 38G
+  threads: 2
+run_gvcf: 
+  h_vmem: 45G
+  mem_free: 45G
+  m_mem_free: 45G
   threads: 2

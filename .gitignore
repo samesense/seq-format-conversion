@@ -4,3 +4,4 @@ data/
 cromwell-*
 metadata.json
 test.err
+logs

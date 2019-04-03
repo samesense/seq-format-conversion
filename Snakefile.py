@@ -25,13 +25,15 @@ rule build_image:
 
 # data/interim/ConvertPairedFastQsToUnmappedBamWf/16afb941-2d18-4036-a849-e868df7f895d/call-CreateFoFN/execution/NA12878_unmapped_bam.list
 # name w/ sample for future
-rule run:
+rule run_ubam:
     input:
         i = IMAGE + 'broadinstitute/gatk:4.1.1.0.log'
     output:
         'data/interim/ubam.ls'
+    log:
+        'log/ubam'
     run:
-        shell('sh run.sh')
+        shell('sh run_ubam.sh &> {log}')
         # cp bam ls
         bam_ls = glob.glob('data/interim/ConvertPairedFastQsToUnmappedBamWf/*/call-CreateFoFN/execution/*.list')[0]
         shell('cp {bam_ls} {output}')
@@ -41,7 +43,9 @@ rule run:
 rule run_gvcf:
     input:
         'data/interim/ubam.ls'
+    log:
+        'logs/gvcf'
     run:
         # mk input
-        shell('sh run_gvcf.sh')
+        shell('sh run_gvcf.sh &> {log}')
         # cp output

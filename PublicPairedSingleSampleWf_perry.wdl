@@ -68,7 +68,7 @@ task CheckFinalVcfExtension {
     CODE
   >>>
   runtime {
-    docker: "python:2.7"
+    docker: "python:2.7.16-slim-stretch"
     memory: "2 GB"
   }
   output {
@@ -220,14 +220,14 @@ task SortAndFixTags {
   command {
     set -o pipefail
 
-    java -Xmx4000m -jar /usr/gitc/picard.jar \
+    java -Xmx8000m -jar /usr/gitc/picard.jar \
     SortSam \
     INPUT=${input_bam} \
     OUTPUT=/dev/stdout \
     SORT_ORDER="coordinate" \
     CREATE_INDEX=false \
     CREATE_MD5_FILE=false | \
-    java -Xmx500m -jar /usr/gitc/picard.jar \
+    java -Xmx1000m -jar /usr/gitc/picard.jar \
     SetNmAndUqTags \
     INPUT=/dev/stdin \
     OUTPUT=${output_bam_basename}.bam \
@@ -239,7 +239,7 @@ task SortAndFixTags {
     docker: "broadinstitute/genomes-in-the-cloud:2.2.5-1486412288"
     disks: "local-disk " + disk_size + " HDD"
     cpu: "1"
-    memory: "10 GB"
+    memory: "15 GB"
     preemptible: preemptible_tries
   }
   output {
@@ -531,7 +531,7 @@ task CreateSequenceGroupingTSV {
     CODE
   >>>
   runtime {
-    docker: "python:2.7"
+    docker: "python:2.7.16-slim-stretch"
     memory: "2 GB"
     cpu: "1"
     preemptible: preemptible_tries
@@ -694,7 +694,7 @@ task ValidateSamFile {
   Int preemptible_tries
 
   command {
-    java -Xmx4000m -jar /usr/gitc/picard.jar \
+    java -Xmx8000m -jar /usr/gitc/picard.jar \
       ValidateSamFile \
       INPUT=${input_bam} \
       OUTPUT=${report_filename} \
@@ -706,7 +706,7 @@ task ValidateSamFile {
   }
   runtime {
     docker: "broadinstitute/genomes-in-the-cloud:2.2.5-1486412288"
-    memory: "7 GB"
+    memory: "14 GB"
     disks: "local-disk " + disk_size + " HDD"
     preemptible: preemptible_tries
   }

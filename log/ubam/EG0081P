@@ -1,0 +1,139 @@
+[2019-04-16 15:21:31,47] [info] Running with database db.url = jdbc:hsqldb:mem:b38a871a-2533-415c-901c-bf50ae000efc;shutdown=false;hsqldb.tx=mvcc
+[2019-04-16 15:21:36,92] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+[2019-04-16 15:21:36,94] [info] [RenameWorkflowOptionsInMetadata] 100%
+[2019-04-16 15:21:37,00] [info] Running with database db.url = jdbc:hsqldb:mem:1494610b-c62f-4a6b-9625-3c6ae28160cc;shutdown=false;hsqldb.tx=mvcc
+[2019-04-16 15:21:37,31] [info] Slf4jLogger started
+[2019-04-16 15:21:37,56] [info] Workflow heartbeat configuration:
+{
+  "cromwellId" : "cromid-a357e4d",
+  "heartbeatInterval" : "2 minutes",
+  "ttl" : "10 minutes",
+  "writeBatchSize" : 10000,
+  "writeThreshold" : 10000
+}
+[2019-04-16 15:21:37,59] [info] Metadata summary refreshing every 2 seconds.
+[2019-04-16 15:21:37,62] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
+[2019-04-16 15:21:37,62] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
+[2019-04-16 15:21:37,64] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
+[2019-04-16 15:21:38,22] [info] JobExecutionTokenDispenser - Distribution rate: 50 per 1 seconds.
+[2019-04-16 15:21:38,22] [info] SingleWorkflowRunnerActor: Version 36
+[2019-04-16 15:21:38,23] [info] SingleWorkflowRunnerActor: Submitting workflow
+[2019-04-16 15:21:38,26] [info] Unspecified type (Unspecified version) workflow cf34bf39-6234-46a6-b454-9e68759e3760 submitted
+[2019-04-16 15:21:38,27] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2mcf34bf39-6234-46a6-b454-9e68759e3760[0m
+[2019-04-16 15:21:38,27] [info] 1 new workflows fetched
+[2019-04-16 15:21:38,27] [info] WorkflowManagerActor Starting workflow [38;5;2mcf34bf39-6234-46a6-b454-9e68759e3760[0m
+[2019-04-16 15:21:38,28] [info] WorkflowManagerActor Successfully started WorkflowActor-cf34bf39-6234-46a6-b454-9e68759e3760
+[2019-04-16 15:21:38,28] [info] Retrieved 1 workflows from the WorkflowStoreActor
+[2019-04-16 15:21:38,28] [[38;5;220mwarn[0m] SingleWorkflowRunnerActor: received unexpected message: Done in state RunningSwraData
+[2019-04-16 15:21:38,29] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
+[2019-04-16 15:21:38,34] [info] MaterializeWorkflowDescriptorActor [[38;5;2mcf34bf39[0m]: Parsing workflow as WDL draft-2
+[2019-04-16 15:21:38,91] [info] MaterializeWorkflowDescriptorActor [[38;5;2mcf34bf39[0m]: Call-to-Backend assignments: ConvertPairedFastQsToUnmappedBamWf.CreateFoFN -> SGE, ConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM -> SGE
+[2019-04-16 15:21:38,99] [[38;5;220mwarn[0m] SGE [[38;5;2mcf34bf39[0m]: Key/s [preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2019-04-16 15:21:38,99] [[38;5;220mwarn[0m] SGE [[38;5;2mcf34bf39[0m]: Key/s [preemptible, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2019-04-16 15:21:43,23] [info] WorkflowExecutionActor-cf34bf39-6234-46a6-b454-9e68759e3760 [[38;5;2mcf34bf39[0m]: Starting ConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM
+[2019-04-16 15:21:44,55] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Unrecognized runtime attribute keys: preemptible, disks
+[2019-04-16 15:21:44,70] [[38;5;220mwarn[0m] Localization via hard link has failed: /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/inputs/386047559/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R1.fastq -> /mnt/isilon/helbig_lab/Users/ganesans/Clinical_Exomes/Trio/EG0081/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R1.fastq: Invalid cross-device link
+[2019-04-16 15:22:09,57] [[38;5;220mwarn[0m] Localization via hard link has failed: /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/inputs/386047559/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R2.fastq -> /mnt/isilon/helbig_lab/Users/ganesans/Clinical_Exomes/Trio/EG0081/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R2.fastq: Invalid cross-device link
+[2019-04-16 15:22:48,07] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: [38;5;5m/gatk/gatk --java-options "-Xmx3000m" \
+FastqToSam \
+--FASTQ /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/inputs/386047559/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R1.fastq \
+--FASTQ2 /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/inputs/386047559/CLINICALWES-114_CWES-0978-P-A-DGD-17-5032.sorted.mdup_R2.fastq \
+--OUTPUT EG0081P.unmapped.bam \
+--READ_GROUP_NAME EG0081P \
+--SAMPLE_NAME EG0081P \
+--LIBRARY_NAME Agilent-SureSelect-Clinical-Exome \
+--PLATFORM_UNIT na \
+--RUN_DATE 2016-09-01T02:00:00+0200 \
+--PLATFORM illumina \
+--SEQUENCING_CENTER DGD[0m
+[2019-04-16 15:22:48,12] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: executing: export TMPDIR=/home/evansj/me/tmp/
+module load singularity
+
+export SIMG=/home/evansj/me/projects/asif/images/
+mkdir -p /home/evansj/me/projects/asif/images/broadinstitute
+if [ ! -f /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg ]; then
+    singularity build /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg docker://broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa
+fi
+
+echo "singularity exec --bind /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0 /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg /bin/bash /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/execution/script" | qsub \
+-terse \
+-V \
+-b n \
+-N cromwell_cf34bf39_PairedFastQsToUnmappedBAM \
+-wd /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0 \
+-pe smp 1 \
+-l h_vmem=10.0g \
+-l m_mem_free=10.0g \
+-q all.q
+[2019-04-16 15:22:52,66] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: job id: 132922
+[2019-04-16 15:22:52,66] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Status change from - to WaitingForReturnCode
+[2019-04-16 15:36:53,53] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.PairedFastQsToUnmappedBAM:0:1]: Status change from WaitingForReturnCode to Done
+[2019-04-16 15:36:56,43] [info] WorkflowExecutionActor-cf34bf39-6234-46a6-b454-9e68759e3760 [[38;5;2mcf34bf39[0m]: Starting ConvertPairedFastQsToUnmappedBamWf.CreateFoFN
+[2019-04-16 15:36:57,24] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: Unrecognized runtime attribute keys: preemptible
+[2019-04-16 15:36:57,28] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: [38;5;5mmv /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN/execution/write_lines_1718f9cbdacd8924706d7092c5cdb84c.tmp  EG0081P_unmapped_bam.list[0m
+[2019-04-16 15:36:57,29] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: executing: export TMPDIR=/home/evansj/me/tmp/
+module load singularity
+
+export SIMG=/home/evansj/me/projects/asif/images/
+mkdir -p /home/evansj/me/projects/asif/images/broadinstitute
+if [ ! -f /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg ]; then
+    singularity build /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg docker://broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa
+fi
+
+echo "singularity exec --bind /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN:/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN /home/evansj/me/projects/asif/images/broadinstitute/gatk@sha256:cc8981d0527e716775645b04a7f59e96a52ad59a7ae9788ddc47902384bf35aa.simg /bin/bash /cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN/execution/script" | qsub \
+-terse \
+-V \
+-b n \
+-N cromwell_cf34bf39_CreateFoFN \
+-wd /mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN \
+-pe smp 1 \
+ \
+ \
+-q all.q
+[2019-04-16 15:36:57,64] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: job id: 137902
+[2019-04-16 15:36:57,64] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: Status change from - to WaitingForReturnCode
+[2019-04-16 15:37:32,79] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcf34bf39[0mConvertPairedFastQsToUnmappedBamWf.CreateFoFN:NA:1]: Status change from WaitingForReturnCode to Done
+[2019-04-16 15:37:34,18] [info] WorkflowExecutionActor-cf34bf39-6234-46a6-b454-9e68759e3760 [[38;5;2mcf34bf39[0m]: Workflow ConvertPairedFastQsToUnmappedBamWf complete. Final Outputs:
+{
+  "ConvertPairedFastQsToUnmappedBamWf.unmapped_bam_list": "/mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN/execution/EG0081P_unmapped_bam.list",
+  "ConvertPairedFastQsToUnmappedBamWf.output_bams": ["/mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/execution/EG0081P.unmapped.bam"]
+}
+[2019-04-16 15:37:54,81] [info] WorkflowManagerActor WorkflowActor-cf34bf39-6234-46a6-b454-9e68759e3760 is in a terminal state: WorkflowSucceededState
+[2019-04-16 15:38:29,09] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
+{
+  "outputs": {
+    "ConvertPairedFastQsToUnmappedBamWf.unmapped_bam_list": "/mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-CreateFoFN/execution/EG0081P_unmapped_bam.list",
+    "ConvertPairedFastQsToUnmappedBamWf.output_bams": ["/mnt/isilon/dbhi_bfx/perry/projects/asif/seq-format-conversion/cromwell-executions/ConvertPairedFastQsToUnmappedBamWf/cf34bf39-6234-46a6-b454-9e68759e3760/call-PairedFastQsToUnmappedBAM/shard-0/execution/EG0081P.unmapped.bam"]
+  },
+  "id": "cf34bf39-6234-46a6-b454-9e68759e3760"
+}
+[2019-04-16 15:38:32,68] [info] Workflow polling stopped
+[2019-04-16 15:38:32,69] [info] Shutting down WorkflowStoreActor - Timeout = 5 seconds
+[2019-04-16 15:38:32,69] [info] Shutting down WorkflowLogCopyRouter - Timeout = 5 seconds
+[2019-04-16 15:38:32,69] [info] Shutting down JobExecutionTokenDispenser - Timeout = 5 seconds
+[2019-04-16 15:38:32,69] [info] Aborting all running workflows.
+[2019-04-16 15:38:32,69] [info] JobExecutionTokenDispenser stopped
+[2019-04-16 15:38:32,69] [info] WorkflowStoreActor stopped
+[2019-04-16 15:38:32,69] [info] WorkflowLogCopyRouter stopped
+[2019-04-16 15:38:32,69] [info] Shutting down WorkflowManagerActor - Timeout = 3600 seconds
+[2019-04-16 15:38:32,69] [info] WorkflowManagerActor All workflows finished
+[2019-04-16 15:38:32,69] [info] WorkflowManagerActor stopped
+[2019-04-16 15:38:32,69] [info] Connection pools shut down
+[2019-04-16 15:38:32,69] [info] Shutting down SubWorkflowStoreActor - Timeout = 1800 seconds
+[2019-04-16 15:38:32,69] [info] Shutting down JobStoreActor - Timeout = 1800 seconds
+[2019-04-16 15:38:32,69] [info] Shutting down CallCacheWriteActor - Timeout = 1800 seconds
+[2019-04-16 15:38:32,69] [info] SubWorkflowStoreActor stopped
+[2019-04-16 15:38:32,70] [info] Shutting down ServiceRegistryActor - Timeout = 1800 seconds
+[2019-04-16 15:38:32,70] [info] Shutting down DockerHashActor - Timeout = 1800 seconds
+[2019-04-16 15:38:32,70] [info] Shutting down IoProxy - Timeout = 1800 seconds
+[2019-04-16 15:38:32,70] [info] JobStoreActor stopped
+[2019-04-16 15:38:32,70] [info] KvWriteActor Shutting down: 0 queued messages to process
+[2019-04-16 15:38:32,70] [info] WriteMetadataActor Shutting down: 0 queued messages to process
+[2019-04-16 15:38:32,70] [info] DockerHashActor stopped
+[2019-04-16 15:38:32,70] [info] IoProxy stopped
+[2019-04-16 15:38:32,70] [info] CallCacheWriteActor Shutting down: 0 queued messages to process
+[2019-04-16 15:38:32,96] [info] CallCacheWriteActor stopped
+[2019-04-16 15:38:32,97] [info] ServiceRegistryActor stopped
+[2019-04-16 15:38:32,99] [info] Database closed
+[2019-04-16 15:38:32,99] [info] Stream materializer shut down
+[2019-04-16 15:38:32,99] [info] WDL HTTP import resolver closed
